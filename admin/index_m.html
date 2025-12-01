@@ -1,52 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="style.css" />
-</head>
+<!doctype html>
+<html><head><meta charset="utf-8"><title>APsystems EZ1</title></head>
 <body>
-<div class="m">
-<h2>APsystems EZ1 Settings</h2>
-<table>
-<tr>
-<td>Device IP</td>
-<td><input type="text" id="deviceIp" /></td>
-</tr>
-<tr>
-<td>Poll Interval (s)</td>
-<td><input type="number" id="pollInterval" /></td>
-</tr>
-<tr>
-<td>Timeout (ms)</td>
-<td><input type="number" id="httpTimeout" /></td>
-</tr>
-<tr>
-<td>Retries</td>
-<td><input type="number" id="httpRetries" /></td>
-</tr>
-</table>
-</div>
-
-
-<script src="../../lib/js/adapter-settings.js"></script>
-<script src="words.js"></script>
-<script>
-load(function (settings) {
-$('#deviceIp').val(settings.deviceIp);
-$('#pollInterval').val(settings.pollInterval);
-$('#httpTimeout').val(settings.httpTimeout);
-$('#httpRetries').val(settings.httpRetries);
-});
-
-
-save(function () {
-return {
-deviceIp: $('#deviceIp').val(),
-pollInterval: $('#pollInterval').val(),
-httpTimeout: $('#httpTimeout').val(),
-httpRetries: $('#httpRetries').val()
-};
-});
-</script>
-</body>
-</html>
+  <div class="m">
+    <h2>APsystems EZ1 Adapter Settings</h2>
+    <table>
+      <tr><td>Devices (JSON array):</td><td><textarea id="devices" cols="40" rows="6"></textarea></td></tr>
+      <tr><td>Poll Interval (s):</td><td><input id="pollInterval" type="number" /></td></tr>
+      <tr><td>Timeout (ms):</td><td><input id="httpTimeout" type="number" /></td></tr>
+      <tr><td>Retries:</td><td><input id="httpRetries" type="number" /></td></tr>
+      <tr><td>Alert Email:</td><td><input id="alertEmail" type="text" /></td></tr>
+    </table>
+    <p>Devices format: [{ "name":"Roof", "ip":"192.168.1.50" }, ... ]</p>
+  </div>
+  <script src="../../lib/js/adapter-settings.js"></script>
+  <script src="words.js"></script>
+  <script>
+    load(function(settings){
+      document.getElementById('devices').value = JSON.stringify(settings.devices || settings.deviceIp ? (settings.devices || [{name:'EZ1',ip:settings.deviceIp}]) : [], null, 2);
+      document.getElementById('pollInterval').value = settings.pollInterval || 30;
+      document.getElementById('httpTimeout').value = settings.httpTimeout || 5000;
+      document.getElementById('httpRetries').value = settings.httpRetries || 2;
+      document.getElementById('alertEmail').value = settings.alertEmail || '';
+    });
+    save(function(){
+      try {
+        const devs = JSON.parse(document.getElementById('devices').value);
+        return {
+          devices: devs,
+          pollInterval: Number(document.getElementById('pollInterval').value),
+          httpTimeout: Number(document.getElementById('httpTimeout').value),
+          httpRetries: Number(document.getElementById('httpRetries').value),
+          alertEmail: document.getElementById('alertEmail').value
+        };
+      } catch (e) { alert('Devices JSON parse error'); return false; }
+    });
+  </script>
+</body></html>

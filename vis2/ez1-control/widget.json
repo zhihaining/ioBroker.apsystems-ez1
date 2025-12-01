@@ -1,0 +1,16 @@
+{
+  "common": {
+    "name": "APsystems EZ1 Control",
+    "version": "1.0.0"
+  },
+  "instance": {},
+  "widgets": [
+    {
+      "name": "ez1-control",
+      "title": "EZ1 控制面板",
+      "files": [
+        "widget.html"
+      ]
+    }
+  ]
+}

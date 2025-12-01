@@ -1,31 +1,41 @@
 {
-"common": {
-"name": "apsystems-ez1",
-"version": "0.1.0",
-"news": {
-"0.1.0": { "en": "initial release" }
-},
-"title": "APsystems EZ1 Adapter",
-"titleLang": {
-"en": "APsystems EZ1 Adapter",
-"de": "APsystems EZ1 Adapter",
-"ru": "APsystems EZ1 адаптер",
-"zh-cn": "APsystems EZ1 适配器"
-},
-"authors": [
-"haining zhi <https://github.com/zhihaining>"
-],
-"license": "MIT",
-"platform": "Javascript/Node.js",
-"mode": "daemon",
-"icon": "apsystems.png",
-"enabled": true
-},
-"native": {
-"deviceIp": "192.168.1.50",
-"pollInterval": 30,
-"httpTimeout": 5000,
-"httpRetries": 2
-},
-"objects": []
+  "common": {
+    "name": "apsystems-ez1",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "initial release"
+      }
+    },
+    "title": "APsystems EZ1 Adapter",
+    "titleLang": {
+      "en": "APsystems EZ1 Adapter",
+      "de": "APsystems EZ1 Adapter",
+      "ru": "APsystems EZ1 адаптер",
+      "zh-cn": "APsystems EZ1 适配器"
+    },
+    "authors": [
+      "haining zhi <https://github.com/zhihaining>"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "icon": "apsystems.png",
+    "enabled": true
+  },
+  "native": {
+    "deviceIp": "192.168.1.50",
+    "devices": [
+      {
+        "name": "EZ1",
+        "ip": "192.168.1.50"
+      }
+    ],
+    "pollInterval": 30,
+    "httpTimeout": 5000,
+    "httpRetries": 2,
+    "port": 8050,
+    "alertEmail": ""
+  },
+  "objects": []
 }

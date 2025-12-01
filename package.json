@@ -1,20 +1,17 @@
 {
-"name": "iobroker.apsystems-ez1",
-"version": "0.1.0",
-"description": "APsystems EZ1 local API adapter for ioBroker",
-"author": "haining zhi (https://github.com/zhihaining)",
-"homepage": "https://github.com/zhihaining/iobroker.apsystems-ez1",
-"license": "MIT",
-"main": "main.js",
-"scripts": {
-"test": "node test/test.js"
-},
-"dependencies": {
-"@iobroker/adapter-core": "^3.1.0",
-"axios": "^1.4.0",
-"axios-retry": "^3.3.1"
-},
-"devDependencies": {
-"eslint": "^8.0.0"
-}
+  "name": "iobroker.apsystems-ez1",
+  "version": "0.1.0",
+  "description": "APsystems EZ1 local API adapter for ioBroker",
+  "author": "haining zhi (https://github.com/zhihaining)",
+  "homepage": "https://github.com/zhihaining/iobroker.apsystems-ez1",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": { "test": "node test/test.js" },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.1.0",
+    "axios": "^1.4.0",
+    "axios-retry": "^3.3.1",
+    "nodemailer": "^6.9.3"
+  },
+  "devDependencies": { "eslint": "^8.0.0" }
 }
