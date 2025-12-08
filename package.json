@@ -1,6 +1,6 @@
 {
   "name": "@zhihaining/iobroker.apsystems-ez1",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "APsystems EZ1 local API adapter for ioBroker",
   "author": "haining zhi (https://github.com/zhihaining)",
   "homepage": "https://github.com/zhihaining/iobroker.apsystems-ez1",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@iobroker/adapter-dev": "^1.5.0",
     "@iobroker/create-adapter": "^3.1.2",
+    "@iobroker/repochecker": "^5.1.1",
     "eslint": "^8.0.0",
     "standard-version": "^9.5.0"
   }
