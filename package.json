@@ -7,7 +7,8 @@
   "license": "MIT",
   "main": "main.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "release": "standard-version --release-as"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^3.1.0",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@iobroker/create-adapter": "^3.1.2",
-    "eslint": "^8.0.0"
+    "eslint": "^8.0.0",
+    "standard-version": "^9.5.0"
   }
 }
