@@ -14,6 +14,12 @@
       "ru": "APsystems EZ1 адаптер",
       "zh-cn": "APsystems EZ1 适配器"
     },
+    "desc": {
+      "en": "APsystems EZ1 Adapter",
+      "de": "APsystems EZ1 Adapter",
+      "ru": "APsystems EZ1 адаптер",
+      "zh-cn": "APsystems EZ1 适配器"
+    },
     "authors": [
       "haining zhi <https://github.com/zhihaining>"
     ],
@@ -21,6 +27,14 @@
     "platform": "Javascript/Node.js",
     "mode": "daemon",
     "icon": "apsystems.png",
+    "type": "energy",
+    "keywords": [
+      "iobroker",
+      "solar",
+      "EZ1",
+      "Apsystems"
+    ],
+    "loglevel": "info",
     "enabled": true
   },
   "native": {

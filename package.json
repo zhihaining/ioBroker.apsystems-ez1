@@ -1,11 +1,18 @@
 {
-  "name": "iobroker.apsystems-ez1",
+  "name": "@zhihaining/iobroker.apsystems-ez1",
   "version": "0.1.0",
   "description": "APsystems EZ1 local API adapter for ioBroker",
   "author": "haining zhi (https://github.com/zhihaining)",
   "homepage": "https://github.com/zhihaining/iobroker.apsystems-ez1",
   "license": "MIT",
   "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhihaining/iobroker.apsystems-ez1.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "test": "node test/test.js",
     "release": "standard-version --release-as"
