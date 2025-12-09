@@ -36,11 +36,12 @@
     "@iobroker/adapter-dev": "^1.5.0",
     "@iobroker/dev-server": "^0.8.0",
     "@iobroker/eslint-config": "^2.2.0",
-    "@iobroker/testing": "^5.2.2",
+    "@iobroker/testing": "^5.1.1",
     "@tsconfig/node20": "^20.1.8",
     "@types/iobroker": "npm:@iobroker/types@^7.1.0",
     "@types/node": "^20.19.25",
-    "release-script": "^1.0.2",
+    "release-script": "^0.2.3",
+    "standard-version": "^9.5.0",
     "typescript": "~5.9.3"
   },
   "main": "main.js",
@@ -63,7 +64,7 @@
     "check": "tsc --noEmit -p tsconfig.check.json",
     "lint": "eslint -c eslint.config.mjs .",
     "translate": "translate-adapter",
-    "release": "release-script",
+    "release": "standard-version --release-as",
     "dev-server": "dev-server"
   },
   "bugs": {
