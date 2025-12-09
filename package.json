@@ -1,6 +1,6 @@
 {
   "name": "iobroker.apsystems-ez1",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "APsystems EZ1 microinverters local API adapter for ioBroker",
   "author": {
     "name": "Haining Zhi",
@@ -40,6 +40,7 @@
     "@tsconfig/node20": "^20.1.8",
     "@types/iobroker": "npm:@iobroker/types@^7.1.0",
     "@types/node": "^20.19.25",
+    "release-script": "^1.0.2",
     "typescript": "~5.9.3"
   },
   "main": "main.js",
