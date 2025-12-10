@@ -30,7 +30,7 @@
         "zh-cn": "修复 JSON 解析和存储库检查器问题；添加 adminUI 配置和图标。"
       },
       "0.1.3": {
-        "en": "Describe changes for this release",
+        "en": "Refactor release script, add i18n step, avoid duplicates",
         "de": "Änderungen für dieses Release beschreiben",
         "zh-cn": "描述此版本的更新内容",
         "ru": "Опишите изменения для этого релиза",
