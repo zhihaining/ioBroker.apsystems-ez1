@@ -124,6 +124,9 @@ Please refer to the [`dev-server` documentation](https://github.com/ioBroker/dev
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+### 0.1.3 (2025-12-10)
+- Describe changes for this release
+
 
 ### 0.1.2 (2025-12-10)
 - Fix JSON parsing and repository checker issues; add adminUI config and icons.

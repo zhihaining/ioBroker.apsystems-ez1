@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "apsystems-ez1",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "news": {
       "0.1.1": {
         "en": "initial release",
@@ -28,6 +28,19 @@
         "pl": "Napraw problemy z analizą JSON i sprawdzaniem repozytoriów; dodaj konfigurację i ikony interfejsu administratora.",
         "uk": "Вирішити проблеми аналізу JSON і перевірки сховища; додати конфігурацію і іконки adminUI.",
         "zh-cn": "修复 JSON 解析和存储库检查器问题；添加 adminUI 配置和图标。"
+      },
+      "0.1.3": {
+        "en": "Describe changes for this release",
+        "de": "Änderungen für dieses Release beschreiben",
+        "zh-cn": "描述此版本的更新内容",
+        "ru": "Опишите изменения для этого релиза",
+        "pt": "Descreva as alterações para esta versão",
+        "nl": "Beschrijf wijzigingen voor deze release",
+        "fr": "Décrivez les modifications pour cette version",
+        "it": "Descrivere le modifiche per questa versione",
+        "es": "Describa los cambios para esta versión",
+        "pl": "Opisz zmiany dla tego wydania",
+        "uk": "Опишіть зміни для цього релізу"
       }
     },
     "titleLang": {
