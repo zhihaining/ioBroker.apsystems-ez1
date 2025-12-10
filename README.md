@@ -24,7 +24,7 @@ It supports:
 
 [![NPM](https://nodei.co/npm/iobroker.apsystems-ez1.png?downloads=true)](https://nodei.co/npm/iobroker.apsystems-ez1/)
 
-**Tests:** ![Test and Release](https://github.com/Haining Zhi/ioBroker.apsystems-ez1/workflows/Test%20and%20Release/badge.svg)
+**Tests:** ![Test and Release](https://github.com/zhihaining/ioBroker.apsystems-ez1/workflows/Test%20and%20Release/badge.svg)
 
 ## apsystems-ez1 adapter for ioBroker
 
