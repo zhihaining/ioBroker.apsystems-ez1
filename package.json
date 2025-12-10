@@ -1,5 +1,5 @@
 {
-  "name": "ioBroker.apsystems-ez1",
+  "name": "apsystems-ez1",
   "version": "0.1.2",
   "description": "APsystems EZ1 microinverters local API adapter for ioBroker",
   "author": {
