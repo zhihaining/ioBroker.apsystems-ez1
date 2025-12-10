@@ -20,8 +20,6 @@
         "en": "Fix JSON parsing and repository checker issues; add adminUI config and icons.",
         "de": "JSON-Parsing und Repo-Checker-Probleme behoben; adminUI-Konfiguration und Icons hinzugefügt."
       }
-    }
-
     },
     "titleLang": {
       "en": "Setup Apsystems EZ1 M Device",
