@@ -1,43 +1,30 @@
+
 {
-  "i18n": true,
   "type": "tabs",
   "items": {
     "general": {
       "type": "panel",
-      "label": {
-        "en": "General",
-        "de": "Allgemein",
-        "zh-cn": "常规"
-      },
+      "label": { "en": "General", "de": "Allgemein", "zh-cn": "常规" },
       "items": {
         "devices": {
-          "type": "array",
-          "label": {
-            "en": "Devices",
-            "de": "Geräte",
-            "zh-cn": "设备列表"
-          },
+          "type": "table",
+          "label": { "en": "Devices", "de": "Geräte", "zh-cn": "设备列表" },
           "tooltip": {
-            "en": "Add one or more EZ1 devices you want to poll.",
-            "de": "Fügen Sie ein oder mehrere EZ1-Geräte hinzu, die abgefragt werden sollen.",
-            "zh-cn": "添加需要轮询的一个或多个 EZ1 设备。"
+            "en": "Add one or more EZ1 devices to poll.",
+            "de": "Fügen Sie ein oder mehrere EZ1-Geräte hinzu.",
+            "zh-cn": "添加需要轮询的 EZ1 设备。"
           },
-          "itemLabel": "name",
-          "sortable": true,
-          "table": true,
+          "sm": 12, "md": 12, "lg": 12, "xl": 12, "xs": 12,
           "default": [
             { "name": "EZ1", "ip": "192.168.1.50" }
           ],
-          "items": {
-            "name": {
+          "items": [
+            {
               "type": "text",
-              "label": {
-                "en": "Name",
-                "de": "Name",
-                "zh-cn": "名称"
-              },
+              "attr": "name",
+              "title": { "en": "Name", "de": "Name", "zh-cn": "名称" },
               "width": "30%",
-              "default": "EZ1",
+              "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3,
               "validator": {
                 "type": "regex",
                 "pattern": "^[^\\s].{0,62}$",
@@ -48,26 +35,23 @@
                 }
               }
             },
-            "ip": {
+            {
               "type": "text",
-              "label": {
-                "en": "IP address",
-                "de": "IP-Adresse",
-                "zh-cn": "IP 地址"
-              },
+              "attr": "ip",
+              "title": { "en": "IP address", "de": "IP-Adresse", "zh-cn": "IP 地址" },
               "width": "40%",
-              "default": "192.168.1.50",
+              "xs": 12, "sm": 6, "md": 6, "lg": 5, "xl": 5,
               "validator": {
                 "type": "regex",
                 "pattern": "^(?:\\d{1,3}\\.){3}\\d{1,3}$",
                 "message": {
-                  "en": "Please enter a valid IPv4 address (e.g., 192.168.1.50).",
+                  "en": "Enter a valid IPv4 address (e.g., 192.168.1.50).",
                   "de": "Bitte eine gültige IPv4-Adresse eingeben (z. B. 192.168.1.50).",
                   "zh-cn": "请输入有效的 IPv4 地址（如 192.168.1.50）。"
                 }
               }
             }
-          }
+          ]
         },
 
         "pollInterval": {
@@ -84,16 +68,14 @@
           },
           "min": 5,
           "max": 3600,
-          "default": 30
+          "step": 1,
+          "default": 30,
+          "xs": 12, "sm": 12, "md": 6, "lg": 4, "xl": 4
         },
 
         "httpTimeout": {
           "type": "number",
-          "label": {
-            "en": "HTTP timeout (ms)",
-            "de": "HTTP-Timeout (ms)",
-            "zh-cn": "HTTP 超时（毫秒）"
-          },
+          "label": { "en": "HTTP timeout (ms)", "de": "HTTP-Timeout (ms)", "zh-cn": "HTTP 超时（毫秒）" },
           "tooltip": {
             "en": "Timeout for requests to each device.",
             "de": "Timeout für Anfragen an jedes Gerät.",
@@ -102,16 +84,13 @@
           "min": 500,
           "max": 60000,
           "step": 100,
-          "default": 5000
+          "default": 5000,
+          "xs": 12, "sm": 12, "md": 6, "lg": 4, "xl": 4
         },
 
         "httpRetries": {
           "type": "number",
-          "label": {
-            "en": "HTTP retries",
-            "de": "HTTP-Wiederholungen",
-            "zh-cn": "HTTP 重试次数"
-          },
+          "label": { "en": "HTTP retries", "de": "HTTP-Wiederholungen", "zh-cn": "HTTP 重试次数" },
           "tooltip": {
             "en": "Number of automatic retries for transient errors.",
             "de": "Anzahl automatischer Wiederholungen bei vorübergehenden Fehlern.",
@@ -119,26 +98,20 @@
           },
           "min": 0,
           "max": 10,
-          "default": 2
+          "step": 1,
+          "default": 2,
+          "xs": 12, "sm": 12, "md": 6, "lg": 4, "xl": 4
         }
       }
     },
 
     "advanced": {
       "type": "panel",
-      "label": {
-        "en": "Advanced",
-        "de": "Erweitert",
-        "zh-cn": "高级"
-      },
+      "label": { "en": "Advanced", "de": "Erweitert", "zh-cn": "高级" },
       "items": {
         "port": {
           "type": "number",
-          "label": {
-            "en": "EZ1 API port",
-            "de": "EZ1 API-Port",
-            "zh-cn": "EZ1 接口端口"
-          },
+          "label": { "en": "EZ1 API port", "de": "EZ1 API-Port", "zh-cn": "EZ1 接口端口" },
           "tooltip": {
             "en": "Local HTTP API port of EZ1 (default 8050).",
             "de": "Lokaler HTTP-API-Port des EZ1 (Standard 8050).",
@@ -146,16 +119,14 @@
           },
           "min": 1,
           "max": 65535,
-          "default": 8050
+          "step": 1,
+          "default": 8050,
+          "xs": 12, "sm": 12, "md": 6, "lg": 4, "xl": 4
         },
 
         "alertEmail": {
           "type": "text",
-          "label": {
-            "en": "Alert email (optional)",
-            "de": "Alarm-E-Mail (optional)",
-            "zh-cn": "告警邮箱（可选）"
-          },
+          "label": { "en": "Alert email (optional)", "de": "Alarm-E-Mail (optional)", "zh-cn": "告警邮箱（可选）" },
           "tooltip": {
             "en": "If set, critical errors will be mailed (requires local mail setup).",
             "de": "Wenn gesetzt, werden kritische Fehler per E-Mail versendet (lokale Mail-Konfiguration erforderlich).",
@@ -170,7 +141,8 @@
               "de": "Leer lassen oder eine gültige E-Mail-Adresse angeben.",
               "zh-cn": "留空或提供有效的邮箱地址。"
             }
-          }
+          },
+          "xs": 12, "sm": 12, "md": 6, "lg": 4, "xl": 4
         }
       }
     }

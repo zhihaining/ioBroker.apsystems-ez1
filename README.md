@@ -1,24 +1,37 @@
 ![Logo](admin/apsystems-ez1.png)
-# ioBroker.apsystems-ez1
 
-Current adapter version: **0.1.2**
-
-**Author:** haining zhi (https://github.com/zhihaining)
-
-This adapter integrates with APsystems EZ1 microinverters via the device's Local HTTP API (port 8050). It supports reading realtime power/energy, device info, alarms and allows setting MaxPower and On/Off state.
+# ioBroker.apsystems-ez1 ![Version](https://img.shields.io/badge/version-0.1.2-blue)
 
 [![NPM version](https://img.shields.io/npm/v/iobroker.apsystems-ez1.svg)](https://www.npmjs.com/package/iobroker.apsystems-ez1)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.apsystems-ez1.svg)](https://www.npmjs.com/package/iobroker.apsystems-ez1)
 ![Number of Installations](https://iobroker.live/badges/apsystems-ez1-installed.svg)
 ![Current version in stable repository](https://iobroker.live/badges/apsystems-ez1-stable.svg)
 
+---
+
+## Description
+This adapter integrates with **APsystems EZ1 microinverters** via the device's **Local HTTP API (port 8050)**.  
+It supports:
+- Reading realtime power and energy
+- Device info and alarms
+- Setting MaxPower and On/Off state
+
+---
+
+## Author
+**haining zhi** ([GitHub](https://github.com/zhihaining))
+
+---
+
+## Installation
+```bash
+npm install iobroker.apsystems-ez1
+
 [![NPM](https://nodei.co/npm/iobroker.apsystems-ez1.png?downloads=true)](https://nodei.co/npm/iobroker.apsystems-ez1/)
 
 **Tests:** ![Test and Release](https://github.com/Haining Zhi/ioBroker.apsystems-ez1/workflows/Test%20and%20Release/badge.svg)
 
 ## apsystems-ez1 adapter for ioBroker
-
-This adapter integrates with APsystems EZ1 microinverters via the device's Local HTTP API (port 8050). It supports reading realtime power/energy, device info, alarms and allows setting MaxPower and On/Off state.
 
 ## Developer manual
 This section is intended for the developer. It can be deleted later.
