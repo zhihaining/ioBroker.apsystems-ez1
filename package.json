@@ -27,9 +27,6 @@
   "engines": {
     "node": ">= 20"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
   "dependencies": {
     "@iobroker/adapter-core": "^3.3.2"
   },
