@@ -177,27 +177,28 @@ and a new release will be published automatically.
 ---
 
 ## 📜 Changelog
-0.1.6
+### **WORK IN PROGRESS**
+### 0.1.6
 
 - Fix warning at startup of validator function
 
-0.1.5
+### 0.1.5
 
 - First pre‑release version
 
-0.1.4
+### 0.1.4
 
 - First hardware‑tested version
 
-0.1.3
+### 0.1.3
 
 - Refactor release script, add i18n step, avoid duplicates
 
-0.1.2
+### 0.1.2
 
 - Fix JSON parsing and repository checker issues; add dminUI config and icons
 
-0.1.1
+### 0.1.1
 
 - Initial release
 
