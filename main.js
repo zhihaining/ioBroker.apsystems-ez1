@@ -235,14 +235,14 @@ class ApsystemsEz1 extends utils.Adapter {
 
             if (alarm?.data) {
                 const a = alarm.data;
-                this.setState(`${base}.alarm.og`, !!a.og, true);
-                this.setState(`${base}.alarm.isce1`, !!a.isce1, true);
-                this.setState(`${base}.alarm.isce2`, !!a.isce2, true);
-                this.setState(`${base}.alarm.oe`, !!a.oe, true);
+                this.setState(`${base}.alarm.og`, a.og ? 1 : 0, true);
+                this.setState(`${base}.alarm.isce1`, a.isce1 ? 1 : 0, true);
+                this.setState(`${base}.alarm.isce2`, a.isce2 ? 1 : 0, true);
+                this.setState(`${base}.alarm.oe`, a.oe ? 1 : 0, true);
             }
 
             if (onoff?.data) {
-                this.setState(`${base}.control.onOff`, onoff.data.status === 0, true);
+                this.setState(`${base}.control.onOff`, onoff.data.status === 0 ? 1 : 0, true);
             }
         } catch (e) {
             this.log.error("updateStatesForDevice error: " + e);
