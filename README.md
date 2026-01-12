@@ -178,6 +178,8 @@ and a new release will be published automatically.
 
 ## 📜 Changelog
 ### **WORK IN PROGRESS**
+- fixing PR suggestions and preparing release 0.1.7
+
 ### 0.1.6
 
 - Fix warning at startup of validator function
