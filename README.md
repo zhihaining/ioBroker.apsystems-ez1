@@ -177,7 +177,7 @@ and a new release will be published automatically.
 ---
 
 ## 📜 Changelog
-### **WORK IN PROGRESS**
+### 0.1.7 (2026-01-12)
 - fixing PR suggestions and preparing release 0.1.7
 
 ### 0.1.6

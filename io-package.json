@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "apsystems-ez1",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "news": {
+      "0.1.7": {
+        "en": "fixing PR suggestions and preparing release 0.1.7",
+        "de": "fixierung von PR-Vorschlägen und Vorbereitung des Release 0.1.7",
+        "ru": "исправление PR-предложений и подготовка выпуска 0,1.7",
+        "pt": "fixação de sugestões de RP e preparação da libertação 0.1.17",
+        "nl": "vaststelling van PR-voorstellen en voorbereiding van release 0.1.7",
+        "fr": "fixer les suggestions de PR et préparer la version 0.1.7",
+        "it": "fissare i suggerimenti PR e preparare il rilascio 0.1.7",
+        "es": "fijación de sugerencias de PR y preparación de la liberación 0.1.7",
+        "pl": "ustalające propozycje PR i przygotowujące wydanie 0.1.7",
+        "uk": "фіксація PR пропозицій та підготовка релізу 0.1.7",
+        "zh-cn": "确定公关建议和准备发布0.1.7"
+      },
       "0.1.1": {
         "en": "initial release",
         "de": "Erstveröffentlichung",
