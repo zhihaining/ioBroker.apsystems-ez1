@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "apsystems-ez1",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "news": {
+      "0.1.8": {
+        "en": "modified alarm and on/off from boolean to number",
+        "de": "modifizierter alarm und ein/aus von boolean zu nummer",
+        "ru": "модифицированная сигнализация и включение/выключение с булевой на номер",
+        "pt": "alarme modificado e ligado/ desligado do booleano para o número",
+        "nl": "gewijzigd alarm en aan/uit van booleaans naar nummer",
+        "fr": "alarme modifiée et marche/arrêt du booléen au nombre",
+        "it": "allarme modificato e on/off dal booleano al numero",
+        "es": "alarma modificada y on/off de booleano a número",
+        "pl": "modyfikowany alarm i włączanie / wyłączanie z boolean na numer",
+        "uk": "модифікована сигналізація та відключення від boolean до номеру",
+        "zh-cn": "修改提醒并打开/关闭从布尔到数字"
+      },
       "0.1.7": {
         "en": "fixing PR suggestions and preparing release 0.1.7",
         "de": "fixierung von PR-Vorschlägen und Vorbereitung des Release 0.1.7",
@@ -80,19 +93,6 @@
         "pl": "pierwsza wersja przedpremierowa",
         "uk": "перша попередня версія",
         "zh-cn": "第一个预发布版本"
-      },
-      "0.1.6": {
-        "en": "fix warning at startup of validator function",
-        "de": "Warnung beim Start der Validatorfunktion behoben",
-        "ru": "исправить предупреждение при запуске функции валидатора",
-        "pt": "corrigir aviso na inicialização da função validadora",
-        "nl": "waarschuwing bij opstarten van validatorfunctie repareren",
-        "fr": "correction d'un avertissement au démarrage de la fonction de validation",
-        "it": "corretto l'avviso all'avvio della funzione di validazione",
-        "es": "Corregir advertencia al inicio de la función de validación.",
-        "pl": "napraw ostrzeżenie przy uruchomieniu funkcji walidatora",
-        "uk": "виправлено попередження під час запуску функції перевірки",
-        "zh-cn": "修复验证器功能启动时的警告"
       }
     },
     "titleLang": {
