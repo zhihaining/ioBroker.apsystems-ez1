@@ -215,6 +215,6 @@ GitHub: https://github.com/zhihaining
 ## 📄 License
 
 MIT License
-Copyright (c) 2025
+Copyright (c) 2026
 
 ---
