@@ -64,7 +64,7 @@ const opts = {
 
 // ---------- files ----------
 const pkgFile = path.join(process.cwd(), "package.json");
-theIoPkgFile = path.join(process.cwd(), "io-package.json");
+const theIoPkgFile = path.join(process.cwd(), "io-package.json");
 const readmeFile = path.join(process.cwd(), "README.md");
 
 // ---------- load ----------
@@ -97,6 +97,7 @@ let readme = "";
 try {
     readme = fs.readFileSync(readmeFile, "utf8");
 } catch (e) {
+    void e;
     console.warn("README.md not found; skipping changelog update.");
 }
 const dateStr = todayISO();
