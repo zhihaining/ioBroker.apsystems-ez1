@@ -72,7 +72,7 @@ jobs:
         run: npm ci --omit=dev
 
       - name: Run release script
-        run: npx release-script
+        run: npx @alcalzone/release-script --skip-version-bumping
 
       - name: Publish to npm (trusted publishing)
         run: npm publish --provenance --access public
