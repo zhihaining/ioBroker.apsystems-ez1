@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "apsystems-ez1",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "news": {
+      "0.2.3": {
+        "en": "release 0.2.3 to npm",
+        "de": "freisetzung 0,2.3 bis npm",
+        "ru": "высвобождение 0.2.3 в npm",
+        "pt": "libertação 0.2.3 a npm",
+        "nl": "loslaten 0.2.3 tot npm",
+        "fr": "libération 0.2.3 à npm",
+        "it": "rilascio 0.2.3 a npm",
+        "es": "lanzamiento 0.2.3 a npm",
+        "pl": "wydanie 0.2.3 do npm",
+        "uk": "реліз 0.2.3 до npm",
+        "zh-cn": "释放0.2.3至npm"
+      },
       "0.2.2": {
         "en": "release 0.2.2 to npm",
         "de": "freisetzung von 0,22 bis npm",
@@ -80,19 +93,6 @@
         "pl": "ustalające propozycje PR i przygotowujące wydanie 0.1.7",
         "uk": "фіксація PR пропозицій та підготовка релізу 0.1.7",
         "zh-cn": "确定公关建议和准备发布0.1.7"
-      },
-      "0.1.1": {
-        "en": "initial release",
-        "de": "Erstveröffentlichung",
-        "ru": "Начальная версия",
-        "pt": "lançamento inicial",
-        "nl": "Eerste uitgave",
-        "fr": "Première version",
-        "it": "Versione iniziale",
-        "es": "Versión inicial",
-        "pl": "Pierwsze wydanie",
-        "uk": "Початкова версія",
-        "zh-cn": "首次出版"
       }
     },
     "titleLang": {
