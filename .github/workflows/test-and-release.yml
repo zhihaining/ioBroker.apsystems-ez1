@@ -65,14 +65,11 @@ jobs:
       - name: Print Node / npm versions
         run: node --version && npm --version
 
-      - name: Ensure npm 10.x (optional)
-        run: npm install -g npm@^10.0.0
-
       - name: Install production dependencies only
         run: npm ci
 
       - name: Run release script
-        run: npx @alcalzone/release-script --skip-version-bumping
+        run: npx @alcalzone/release-script
 
       - name: Publish to npm (trusted publishing)
         run: npm publish --provenance --access public
