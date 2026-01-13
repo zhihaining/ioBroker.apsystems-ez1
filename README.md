@@ -189,24 +189,6 @@ and a new release will be published automatically.
 ### 0.2.3 (2026-01-13)
 -release 0.2.3 to npm
 
-### 0.2.2 (2026-01-13)
-- release 0.2.2 to npm
-
-### 0.2.1 (2026-01-13)
-- release 0.2.1 to npm
-
-### 0.2.0 (2026-01-13)
-- releas 0.2.0 to npm
-
-### 0.1.9 (2026-01-13)
-- fixed lint tests
-
-### 0.1.8 (2026-01-12)
-- modified alarm and on/off from boolean to number
-
-### 0.1.7 (2026-01-12)
-- fixing PR suggestions and preparing release 0.1.7
-
 ### 0.1.6
 
 - Fix warning at startup of validator function
