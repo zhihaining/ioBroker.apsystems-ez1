@@ -69,6 +69,11 @@ Example:
 - Number of retry attempts
 - Default: 2
 
+### EZ1 API-Port
+
+- IP Port Number of device
+- Default: 8050
+
 ### alertEmail
 
 - Optional email address for persistent error alerts
@@ -86,6 +91,7 @@ apsystems-ez1.<instance>.devices.<DeviceName>.*
 
 ### Device Information
 |State	|Type	|Description|
+| -------- | ------- | ------- |
 |deviceId	|string	|Device ID|
 |devVer	|string	|Firmware version|
 |ssid	|string	|Connected WiFi SSID|
@@ -93,6 +99,7 @@ apsystems-ez1.<instance>.devices.<DeviceName>.*
 
 ### Power & Energy
 |State	|Type	|Description|
+| -------- | ------- | ------- |
 |output.p1	|number	|Power channel 1 (W)|
 |output.p2	|number	|Power channel 2 (W)|
 |output.p	|number	|Total power (W)|
@@ -104,11 +111,13 @@ apsystems-ez1.<instance>.devices.<DeviceName>.*
 
 ### Control
 |State	|Type	|Write	|Description|
+| -------- | ------- | ------- | ------- |
 |control.maxPower	|number	|yes	|Set Max Power (W)|
 |control.onOff	|boolean	|yes	|Turn inverter on/off|
 
 ### Alarms
 |State	|Type	|Description|
+| -------- | ------- | ------- |
 |alarm.og	|boolean	|Off‑grid alarm|
 |alarm.isce1	|boolean	|DC1 short circuit|
 |alarm.isce2	|boolean	|DC2 short circuit|
