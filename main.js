@@ -51,7 +51,7 @@ class ApsystemsEz1 extends utils.Adapter {
             ip: dev.ip,
             port: cfg.port || 8050,
             timeout,
-            retries
+            retries,
         });
     }
 
@@ -114,11 +114,11 @@ class ApsystemsEz1 extends utils.Adapter {
                     from: "iobroker-apsystems-ez1@localhost",
                     to: cfg.alertEmail,
                     subject: "APsystems EZ1 Adapter Alert",
-                    text: message
+                    text: message,
                 },
                 err => {
                     if (err) this.log.error("Alert email send failed: " + err);
-                }
+                },
             );
         } catch (e) {
             this.log.error("sendAlert exception: " + e);
@@ -132,20 +132,20 @@ class ApsystemsEz1 extends utils.Adapter {
         await this.setObjectNotExistsAsync("devices", {
             type: "folder",
             common: { name: "Devices" },
-            native: {}
+            native: {},
         });
 
         await this.setObjectNotExistsAsync(`devices.${devId}`, {
             type: "device",
             common: { name: devId },
-            native: {}
+            native: {},
         });
 
         for (const ch of ["output", "control", "alarm"]) {
             await this.setObjectNotExistsAsync(`devices.${devId}.${ch}`, {
                 type: "channel",
                 common: { name: ch },
-                native: {}
+                native: {},
             });
         }
     }
@@ -182,7 +182,7 @@ class ApsystemsEz1 extends utils.Adapter {
             ["alarm.og", "Alarm: Off Grid", "boolean", "indicator.alarm", false],
             ["alarm.isce1", "Alarm: DC1 Short Circuit", "boolean", "indicator.alarm", false],
             ["alarm.isce2", "Alarm: DC2 Short Circuit", "boolean", "indicator.alarm", false],
-            ["alarm.oe", "Alarm: Output Fault", "boolean", "indicator.alarm", false]
+            ["alarm.oe", "Alarm: Output Fault", "boolean", "indicator.alarm", false],
         ];
 
         for (const [id, name, type, role, write] of states) {
@@ -193,9 +193,9 @@ class ApsystemsEz1 extends utils.Adapter {
                     type,
                     role,
                     read: !write,
-                    write
+                    write,
                 },
-                native: {}
+                native: {},
             });
         }
     }
@@ -283,7 +283,7 @@ class ApsystemsEz1 extends utils.Adapter {
         if (Array.isArray(cfg.devices) && cfg.devices.length) {
             devices = cfg.devices.map(d => ({
                 name: d.name || d.ip,
-                ip: d.ip
+                ip: d.ip,
             }));
         }
 
