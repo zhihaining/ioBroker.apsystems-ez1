@@ -41,11 +41,17 @@ class ApsystemsEz1 extends utils.Adapter {
         const MAX_DELAY = 2_147_000_000;
 
         let timeout = Number(cfg.httpTimeout || 5000);
-        if (!Number.isFinite(timeout) || timeout <= 0) timeout = 5000;
-        if (timeout > MAX_DELAY) timeout = MAX_DELAY;
+        if (!Number.isFinite(timeout) || timeout <= 0) {
+            timeout = 5000;
+        }
+        if (timeout > MAX_DELAY) {
+            timeout = MAX_DELAY;
+        }
 
         let retries = Number(cfg.httpRetries || 2);
-        if (!Number.isFinite(retries) || retries < 0) retries = 2;
+        if (!Number.isFinite(retries) || retries < 0) {
+            retries = 2;
+        }
 
         return createClient({
             ip: dev.ip,
@@ -61,7 +67,9 @@ class ApsystemsEz1 extends utils.Adapter {
     async safeGet(api, path, label) {
         try {
             const res = await api.get(path);
-            if (label) this.errorCounts[label] = 0;
+            if (label) {
+                this.errorCounts[label] = 0;
+            }
             return res;
         } catch (err) {
             const key = label || path;
@@ -84,9 +92,12 @@ class ApsystemsEz1 extends utils.Adapter {
     async normalGet(api, path, label) {
         try {
             const res = await api.get(path);
-            if (label) this.errorCounts[label] = 0;
+            if (label) {
+                this.errorCounts[label] = 0;
+            }
             return res;
         } catch (err) {
+            void err;
             const key = label || path;
             this.errorCounts[key] = (this.errorCounts[key] || 0) + 1;
 
@@ -105,7 +116,9 @@ class ApsystemsEz1 extends utils.Adapter {
     // -----------------------------
     sendAlert(message) {
         const cfg = this.getConfig();
-        if (!cfg.alertEmail) return;
+        if (!cfg.alertEmail) {
+            return;
+        }
 
         try {
             const transporter = nodemailer.createTransport({ sendmail: true });
@@ -117,11 +130,13 @@ class ApsystemsEz1 extends utils.Adapter {
                     text: message,
                 },
                 err => {
-                    if (err) this.log.error("Alert email send failed: " + err);
+                    if (err) {
+                        this.log.error(`Alert email send failed: ${err}`);
+                    }
                 },
             );
         } catch (e) {
-            this.log.error("sendAlert exception: " + e);
+            this.log.error(`sendAlert exception: ${e}`);
         }
     }
 
@@ -245,7 +260,7 @@ class ApsystemsEz1 extends utils.Adapter {
                 this.setState(`${base}.control.onOff`, onoff.data.status === 0 ? 1 : 0, true);
             }
         } catch (e) {
-            this.log.error("updateStatesForDevice error: " + e);
+            this.log.error(`updateStatesForDevice error: ${e}`);
         }
     }
 
@@ -300,8 +315,12 @@ class ApsystemsEz1 extends utils.Adapter {
         // Poll interval
         const MAX_DELAY = 2_147_000_000;
         let interval = Number(cfg.pollInterval || 30) * 1000;
-        if (!Number.isFinite(interval) || interval <= 0) interval = 30000;
-        if (interval > MAX_DELAY) interval = MAX_DELAY;
+        if (!Number.isFinite(interval) || interval <= 0) {
+            interval = 30000;
+        }
+        if (interval > MAX_DELAY) {
+            interval = MAX_DELAY;
+        }
 
         // Initial poll
         for (const dev of devices) {
@@ -322,18 +341,24 @@ class ApsystemsEz1 extends utils.Adapter {
     // Control handling
     // -----------------------------
     async onStateChange(id, state) {
-        if (!state || state.ack) return;
+        if (!state || state.ack) {
+            return;
+        }
 
         const parts = id.split(".");
         const idx = parts.indexOf("devices");
-        if (idx === -1 || parts.length < idx + 4) return;
+        if (idx === -1 || parts.length < idx + 4) {
+            return;
+        }
 
         const devId = parts[idx + 1];
         const controlPath = parts.slice(idx + 2).join(".");
 
         const cfg = this.getConfig();
         const dev = cfg.devices.find(d => this.nameToId(d.name || d.ip) === devId);
-        if (!dev) return;
+        if (!dev) {
+            return;
+        }
 
         const api = this.getApiForDevice(dev);
 
@@ -342,7 +367,7 @@ class ApsystemsEz1 extends utils.Adapter {
                 await api.get(`/setMaxPower?p=${encodeURIComponent(state.val)}`);
                 this.setState(id, state.val, true);
             } catch (e) {
-                this.log.error("setMaxPower error: " + e);
+                this.log.error(`setMaxPower error: ${e}`);
             }
         }
 
@@ -352,7 +377,7 @@ class ApsystemsEz1 extends utils.Adapter {
                 await api.get(`/setOnOff?status=${status}`);
                 this.setState(id, state.val, true);
             } catch (e) {
-                this.log.error("setOnOff error: " + e);
+                this.log.error(`setOnOff error: ${e}`);
             }
         }
     }
@@ -362,9 +387,12 @@ class ApsystemsEz1 extends utils.Adapter {
     // -----------------------------
     onUnload(callback) {
         try {
-            if (this.pollTimer) this.clearInterval(this.pollTimer);
+            if (this.pollTimer) {
+                this.clearInterval(this.pollTimer);
+            }
             callback();
         } catch (e) {
+            this.log.error(`setMaxPower error: ${e}`);
             callback();
         }
     }
