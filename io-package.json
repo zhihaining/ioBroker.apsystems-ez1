@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "apsystems-ez1",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "news": {
+      "0.2.2": {
+        "en": "release 0.2.2 to npm",
+        "de": "freisetzung von 0,22 bis npm",
+        "ru": "выпустить 0.2.2 в npm",
+        "pt": "libertação 0.2.2 a npm",
+        "nl": "release 0.2.2 to npm",
+        "fr": "libération 0.2.2 à npm",
+        "it": "rilascio 0.2.2 a npm",
+        "es": "lanzamiento 0.2.2 a npm",
+        "pl": "uwalnianie 0,2.2 do npm",
+        "uk": "реліз 0.2.2 до npm",
+        "zh-cn": "释放0.2.2至npm"
+      },
       "0.2.1": {
         "en": "release 0.2.1 to npm",
         "de": "freisetzung 0,2.1 bis npm",
@@ -80,19 +93,6 @@
         "pl": "Pierwsze wydanie",
         "uk": "Початкова версія",
         "zh-cn": "首次出版"
-      },
-      "0.1.2": {
-        "en": "Fix JSON parsing and repository checker issues; add adminUI config and icons.",
-        "de": "JSON-Parsing und Repo-Checker-Probleme behoben; adminUI-Konfiguration und Icons hinzugefügt.",
-        "ru": "Исправить проблемы с анализом JSON и проверкой репозитория; добавьте конфигурацию и значки adminUI.",
-        "pt": "Corrigir problemas de análise JSON e verificador de repositório; adicione configuração e ícones do adminUI.",
-        "nl": "Problemen met JSON-parsing en repositorycontrole oplossen; voeg adminUI-configuratie en pictogrammen toe.",
-        "fr": "Résoudre les problèmes d'analyse JSON et de vérificateur de référentiel ; ajoutez la configuration et les icônes adminUI.",
-        "it": "Risolti i problemi di analisi JSON e controllo del repository; aggiungi la configurazione e le icone dell'interfaccia utente amministrativa.",
-        "es": "Solucionar problemas de análisis JSON y verificador de repositorio; agregue la configuración y los íconos de adminUI.",
-        "pl": "Napraw problemy z analizą JSON i sprawdzaniem repozytoriów; dodaj konfigurację i ikony interfejsu administratora.",
-        "uk": "Вирішити проблеми аналізу JSON і перевірки сховища; додати конфігурацію і іконки adminUI.",
-        "zh-cn": "修复 JSON 解析和存储库检查器问题；添加 adminUI 配置和图标。"
       }
     },
     "titleLang": {
