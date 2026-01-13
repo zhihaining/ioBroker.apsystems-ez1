@@ -185,7 +185,7 @@ and a new release will be published automatically.
 
 ---
 
-## 📜 Changelog
+## Changelog
 ### 0.2.3 (2026-01-13)
 -release 0.2.3 to npm
 
@@ -221,7 +221,7 @@ Haining Zhi
 GitHub: https://github.com/zhihaining
 
 ---
-## 📄 License
+## License
 
 MIT License
 Copyright (c) 2026
