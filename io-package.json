@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "apsystems-ez1",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "news": {
+      "0.1.9": {
+        "en": "fixed lint tests",
+        "de": "feste linttests",
+        "ru": "испытания фиксированных винтов",
+        "pt": "ensaios de fiapos fixos",
+        "nl": "vaste pluimtests",
+        "fr": "essais fixes de linte",
+        "it": "prove fisse",
+        "es": "pruebas de forro fijo",
+        "pl": "badania na podłożu stałym",
+        "uk": "фіксовані тести лейн",
+        "zh-cn": "固定涂料测试"
+      },
       "0.1.8": {
         "en": "modified alarm and on/off from boolean to number",
         "de": "modifizierter alarm und ein/aus von boolean zu nummer",
@@ -80,19 +93,6 @@
         "es": "Describa los cambios para esta versión",
         "pl": "Opisz zmiany dla tego wydania",
         "uk": "Опишіть зміни для цього релізу"
-      },
-      "0.1.5": {
-        "en": "first pre-release version",
-        "de": "erste Vorabversion",
-        "ru": "первая предварительная версия",
-        "pt": "primeira versão de pré-lançamento",
-        "nl": "eerste pre-releaseversie",
-        "fr": "première version préliminaire",
-        "it": "prima versione preliminare",
-        "es": "primera versión preliminar",
-        "pl": "pierwsza wersja przedpremierowa",
-        "uk": "перша попередня версія",
-        "zh-cn": "第一个预发布版本"
       }
     },
     "titleLang": {

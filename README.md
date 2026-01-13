@@ -177,8 +177,9 @@ and a new release will be published automatically.
 ---
 
 ## 📜 Changelog
-### **WORK IN PROGRESS**
+### 0.1.9 (2026-01-13)
 - fixed lint tests
+
 ### 0.1.8 (2026-01-12)
 - modified alarm and on/off from boolean to number
 
