@@ -186,6 +186,8 @@ and a new release will be published automatically.
 ---
 
 ## 📜 Changelog
+### **WORK IN PROGRESS**
+- releas 0.2.0 to npm
 ### 0.1.9 (2026-01-13)
 - fixed lint tests
 
