@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "apsystems-ez1",
-    "version": "0.1.9",
+    "version": "0.2.0",
     "news": {
+      "0.2.0": {
+        "en": "releas 0.2.0 to npm",
+        "de": "läuft 0,2,0 bis npm",
+        "ru": "0.2.0 в npm",
+        "pt": "liberando 0.2.0 a npm",
+        "nl": "0.2.0 naar npm loslaten",
+        "fr": "de 0.2.0 à npm",
+        "it": "releas 0.2.0 a npm",
+        "es": "libera 0.2.0 a npm",
+        "pl": "relaas 0.2.0 do npm",
+        "uk": "0.2.0 до npm",
+        "zh-cn": "重新放出0.2.0至npm时"
+      },
       "0.1.9": {
         "en": "fixed lint tests",
         "de": "feste linttests",
@@ -70,19 +83,6 @@
       },
       "0.1.3": {
         "en": "Refactor release script, add i18n step, avoid duplicates",
-        "de": "Änderungen für dieses Release beschreiben",
-        "zh-cn": "描述此版本的更新内容",
-        "ru": "Опишите изменения для этого релиза",
-        "pt": "Descreva as alterações para esta versão",
-        "nl": "Beschrijf wijzigingen voor deze release",
-        "fr": "Décrivez les modifications pour cette version",
-        "it": "Descrivere le modifiche per questa versione",
-        "es": "Describa los cambios para esta versión",
-        "pl": "Opisz zmiany dla tego wydania",
-        "uk": "Опишіть зміни для цього релізу"
-      },
-      "0.1.4": {
-        "en": "first runable version tested on Hardware",
         "de": "Änderungen für dieses Release beschreiben",
         "zh-cn": "描述此版本的更新内容",
         "ru": "Опишите изменения для этого релиза",
