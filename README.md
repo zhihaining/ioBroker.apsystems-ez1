@@ -186,6 +186,9 @@ and a new release will be published automatically.
 ---
 
 ## 📜 Changelog
+### **WORK IN PROGRESS**
+- release 0.2.1 to npm
+
 ### 0.2.0 (2026-01-13)
 - releas 0.2.0 to npm
 
