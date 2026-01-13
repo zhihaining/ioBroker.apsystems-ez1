@@ -68,6 +68,11 @@ jobs:
       - name: Install production dependencies only
         run: npm ci
 
+      - name: Configure git identity
+        run: |
+           git config --global user.name "github-actions[bot]"
+           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Run release script
         run: npx @alcalzone/release-script
 
