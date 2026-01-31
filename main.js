@@ -172,43 +172,43 @@ class ApsystemsEz1 extends utils.Adapter {
         const base = `devices.${devId}`;
 
         const states = [
-            ["deviceId", "Device ID", "string", "text", false],
-            ["devVer", "Device Version", "string", "text", false],
-            ["ssid", "SSID", "string", "text", false],
-            ["ipAddr", "IP Address", "string", "info.ip", false],
+            { id: "deviceId", name: "Device ID", type: "string", role: "info.serial", read: true, write: false },
+            { id: "devVer", name: "Device Version", type: "string", role: "info.firmware", read: true, write: false },
+            { id: "ssid", name: "SSID", type: "string", role: "text", read: true, write: false },
+            { id: "ipAddr", name: "IP Address", type: "string", role: "info.ip", read: true, write: false },
 
-            ["minPower", "Min Power (W)", "number", "value.power", false],
-            ["maxPower", "Max Power (W)", "number", "value.power", false],
+            { id: "minPower", name: "Min Power (W)", type: "number", role: "value.power", read: true, write: false },
+            { id: "maxPower", name: "Max Power (W)", type: "number", role: "value.power", read: true, write: false },
 
-            ["output.p1", "Power P1 (W)", "number", "value.power", false],
-            ["output.p2", "Power P2 (W)", "number", "value.power", false],
-            ["output.p", "Power P (W)", "number", "value.power", false],
+            { id: "output.p1", name: "Power P1 (W)", type: "number", role: "value.power", read: true, write: false },
+            { id: "output.p2", name: "Power P2 (W)", type: "number", role: "value.power", read: true, write: false },
+            { id: "output.p", name: "Power P (W)", type: "number", role: "value.power", read: true, write: false },
 
-            ["output.e1", "Energy E1 (kWh)", "number", "value.energy", false],
-            ["output.e2", "Energy E2 (kWh)", "number", "value.energy", false],
-            ["output.e", "Energy E (kWh)", "number", "value.energy", false],
+            { id: "output.e1", name: "Energy E1 (kWh)", type: "number", role: "value.energy", read: true, write: false },
+            { id: "output.e2", name: "Energy E2 (kWh)", type: "number", role: "value.energy", read: true, write: false },
+            { id: "output.e", name: "Energy E (kWh)", type: "number", role: "value.energy", read: true, write: false },
 
-            ["output.te1", "Lifetime TE1 (kWh)", "number", "value.energy", false],
-            ["output.te2", "Lifetime TE2 (kWh)", "number", "value.energy", false],
+            { id: "output.te1", name: "Lifetime TE1 (kWh)", type: "number", role: "value.energy", read: true, write: false },
+            { id: "output.te2", name: "Lifetime TE2 (kWh)", type: "number", role: "value.energy", read: true, write: false },
 
-            ["control.maxPower", "Control: Max Power (W)", "number", "level.power", true],
-            ["control.onOff", "Control: On/Off", "boolean", "switch", true],
+            { id: "control.maxPower", name: "Control: Max Power (W)", type: "number", role: "level.power", read: true, write: true },
+            { id: "control.onOff", name: "Control: On/Off", type: "boolean", role: "switch", read: true, write: true },
 
-            ["alarm.og", "Alarm: Off Grid", "boolean", "indicator.alarm", false],
-            ["alarm.isce1", "Alarm: DC1 Short Circuit", "boolean", "indicator.alarm", false],
-            ["alarm.isce2", "Alarm: DC2 Short Circuit", "boolean", "indicator.alarm", false],
-            ["alarm.oe", "Alarm: Output Fault", "boolean", "indicator.alarm", false],
+            { id: "alarm.og", name: "Alarm: Off Grid", type: "boolean", role: "indicator.alarm", read: true, write: false },
+            { id: "alarm.isce1", name: "Alarm: DC1 Short Circuit", type: "boolean", role: "indicator.alarm", read: true, write: false },
+            { id: "alarm.isce2", name: "Alarm: DC2 Short Circuit", type: "boolean", role: "indicator.alarm", read: true, write: false },
+            { id: "alarm.oe", name: "Alarm: Output Fault", type: "boolean", role: "indicator.alarm", read: true, write: false },
         ];
 
-        for (const [id, name, type, role, write] of states) {
-            await this.setObjectNotExistsAsync(`${base}.${id}`, {
+        for (const s of states) {
+            await this.setObjectNotExistsAsync(`${base}.${s.id}`, {
                 type: "state",
                 common: {
-                    name,
-                    type,
-                    role,
-                    read: !write,
-                    write,
+                    name: s.name,
+                    type: s.type,
+                    role: s.role,
+                    read: !!s.read,
+                    write: !!s.write,
                 },
                 native: {},
             });
@@ -250,14 +250,15 @@ class ApsystemsEz1 extends utils.Adapter {
 
             if (alarm?.data) {
                 const a = alarm.data;
-                this.setState(`${base}.alarm.og`, a.og ? 1 : 0, true);
-                this.setState(`${base}.alarm.isce1`, a.isce1 ? 1 : 0, true);
-                this.setState(`${base}.alarm.isce2`, a.isce2 ? 1 : 0, true);
-                this.setState(`${base}.alarm.oe`, a.oe ? 1 : 0, true);
+                this.setState(`${base}.alarm.og`, !!a.og, true);
+                this.setState(`${base}.alarm.isce1`, !!a.isce1, true);
+                this.setState(`${base}.alarm.isce2`, !!a.isce2, true);
+                this.setState(`${base}.alarm.oe`, !!a.oe, true);
             }
 
             if (onoff?.data) {
-                this.setState(`${base}.control.onOff`, onoff.data.status === 0 ? 1 : 0, true);
+                // API uses status 0 = ON, 1 = OFF (legacy), convert to boolean true=ON
+                this.setState(`${base}.control.onOff`, onoff.data.status === 0, true);
             }
         } catch (e) {
             this.log.error(`updateStatesForDevice error: ${e}`);
