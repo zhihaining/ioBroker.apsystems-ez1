@@ -187,9 +187,10 @@ and a new release will be published automatically.
 
 ## Changelog
 ### **WORK IN PROGRESS**
+- Fix review findings
 
 ### 0.2.3 (2026-01-13)
--release 0.2.3 to npm
+- release 0.2.3 to npm
 
 ### 0.1.6
 
