@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "apsystems-ez1",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "news": {
+      "0.2.4": {
+        "en": "Fix review findings",
+        "de": "Ergebnisse der Überprüfung",
+        "ru": "Fix обзор результатов",
+        "pt": "Corrigir as conclusões da revisão",
+        "nl": "Bevindingen van de beoordeling vaststellen",
+        "fr": "Fixer les conclusions de l'examen",
+        "it": "Risolvere i risultati delle recensioni",
+        "es": "Determinación de la revisión",
+        "pl": "Ustalenie ustaleń dotyczących przeglądu",
+        "uk": "Виправлення результатів оглядів",
+        "zh-cn": "确定审查结果"
+      },
       "0.2.3": {
         "en": "release 0.2.3 to npm",
         "de": "freisetzung 0,2.3 bis npm",

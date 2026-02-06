@@ -186,7 +186,7 @@ and a new release will be published automatically.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.2.4 (2026-02-06)
 - Fix review findings
 
 ### 0.2.3 (2026-01-13)
