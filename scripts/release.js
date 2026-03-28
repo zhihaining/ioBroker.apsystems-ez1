@@ -17,9 +17,9 @@
  *   node scripts/release.js 0.1.3 -m "Support multi-device config table"
  */
 
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+const fs = require("node:fs");
+const path = require("node:path");
+const { execSync } = require("node:child_process");
 
 function readJson(file) {
     const txt = fs.readFileSync(file, "utf8");
