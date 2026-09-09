@@ -186,6 +186,9 @@ and a new release will be published automatically.
 ---
 
 ## Changelog
+
+### **WORK IN PROGRESS**
+- (iobroker-bot) Adapter requires node.js >= 22 now.
 ### 0.2.4 (2026-02-06)
 - Fix review findings
 
